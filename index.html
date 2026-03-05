@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Urban Hoops - O Desafio das Ruas</title>
+    <meta name="description" content="Mostre seu talento nas quadras urbanas! Marque pontos e bata recordes no Urban Hoops.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <div id="ui-overlay">
+            <div class="top-bar">
+                <div class="stat-box">
+                    <span class="label">PONTOS</span>
+                    <span id="score" class="value">0</span>
+                </div>
+                <div class="stat-box">
+                    <span class="label">TEMPO</span>
+                    <span id="timer" class="value">60</span>
+                </div>
+                <div class="stat-box">
+                    <span class="label">ERROS</span>
+                    <div id="lives" class="lives-container">
+                        <span class="dot active"></span>
+                        <span class="dot active"></span>
+                        <span class="dot active"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="message-container">
+                <h2 id="feedback-text"></h2>
+            </div>
+        </div>
+
+        <div id="menu-overlay" class="overlay active">
+            <div class="menu-content">
+                <h1>URBAN HOOPS</h1>
+                <p>Arraste a bola para arremessar!</p>
+                <button id="start-btn" class="main-btn">JOGAR AGORA</button>
+            </div>
+        </div>
+
+        <div id="game-over-overlay" class="overlay">
+            <div class="menu-content">
+                <h2>FIM DE JOGO!</h2>
+                <div class="final-stats">
+                    <p>Pontuação Final: <span id="final-score">0</span></p>
+                    <p>Recorde: <span id="high-score">0</span></p>
+                </div>
+                <button id="restart-btn" class="main-btn">TENTAR NOVAMENTE</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
